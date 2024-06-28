@@ -1,0 +1,21 @@
+<div *ngIf="job" class="job-details">
+  <button routerLink="/">Back</button>
+  <h2>{{ job.companyName }} - {{ job.title }}</h2>
+  <img [src]="job.companyLogo" alt="{{ job.companyName }} logo" width="100" />
+  <p><strong>Types:</strong> {{ job.types.join(", ") }}</p>
+  <p><strong>Industries:</strong> {{ job.industries.join(", ") }}</p>
+  <p><strong>Publish date:</strong> {{ job.publishDate }}</p>
+  <p><strong>Location:</strong> {{ job.location }}</p>
+  <p><strong>Reference:</strong> {{ job.reference }}</p>
+  <p><strong>Description:</strong></p>
+  <div
+    [innerHTML]="job.description"
+    style="text-align: justify; color: black"
+  ></div>
+  <!-- <h3>Responsibilities:</h3> -->
+  <ul>
+    <li *ngFor="let responsibility of job.responsibilities">
+      {{ responsibility }}
+    </li>
+  </ul>
+</div>

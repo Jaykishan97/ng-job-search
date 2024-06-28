@@ -1,5 +1,5 @@
 <h2>Favorite Jobs</h2>
-<ul *ngIf="favoriteJobs.length > 0; else noFavorites">
+<ul *ngIf="favoriteJobs.length > 0; else noFavorites" class="favorite-list">
   <li *ngFor="let job of favoriteJobs">
     <img [src]="job.companyLogo" alt="{{ job.companyName }} logo" width="50" />
     <div>

@@ -1,0 +1,30 @@
+button {
+  margin-bottom: 20px;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+img {
+  display: block;
+  margin-bottom: 20px;
+}
+
+p {
+  margin: 5px 0;
+  color: black; /* Ensure all <p> elements have black text */
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.job-details {
+  /* Add your styles here */
+}
+
+.job-details div {
+  color: black; /* Ensure the text inside divs is black */
+}

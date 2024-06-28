@@ -23,7 +23,7 @@ li div {
 li h3 {
   margin: 0;
   font-size: 1.2em;
-  color: black;
+  color: #2a5c9a; /* Set uniform title color */
 }
 
 li p {
@@ -43,4 +43,9 @@ li .icon-star.active {
   color: gold; /* Gold fill color when active */
   stroke: black; /* Black border */
   stroke-width: 2; /* Border width */
+}
+
+/* Blank CSS properties for favorite-list */
+.favorite-list {
+  /* Add your styles here */
 }
