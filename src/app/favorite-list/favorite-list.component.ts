@@ -2,6 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Job } from '../job.service';
 
+// 1
+// 2
+// 3
+// 4
+// 5
+
 @Component({
   selector: 'app-favorite-list',
   standalone: true,
