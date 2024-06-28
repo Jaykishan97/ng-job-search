@@ -1,0 +1,29 @@
+nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  background-color: #eceff4;
+  border-radius: 5px;
+  padding: 10px;
+  border: none; /* Remove the border */
+}
+
+nav a {
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 0; /* Remove rounded corners */
+  color: #3c4251; /* Default text color */
+  background-color: #eceff4; /* Default background color */
+  flex: 1;
+  text-align: center; /* Center the text */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+  font-weight: bold; /* Make text bold */
+  text-transform: uppercase; /* Make text all caps */
+}
+
+nav a.router-link-active,
+nav a.active {
+  background-color: #3c4251; /* Active background color */
+  color: #eceff4; /* Active text color */
+  border-radius: 0; /* Remove rounded corners */
+}

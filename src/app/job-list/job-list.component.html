@@ -1,0 +1,32 @@
+<h2>Job List</h2>
+<ul>
+  <li *ngFor="let job of jobs">
+    <img [src]="job.companyLogo" alt="{{ job.companyName }} logo" width="50" />
+    <div>
+      <h3>{{ job.title }}</h3>
+      <p>
+        Company: {{ job.companyName }} &nbsp;&nbsp; Reference:
+        {{ job.reference }}
+      </p>
+    </div>
+    <svg
+      class="icon-star"
+      [class.active]="isFavorite(job)"
+      (click)="toggleFavorite(job)"
+      [id]="'star-' + job.id"
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <polygon
+        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+      ></polygon>
+    </svg>
+  </li>
+</ul>
