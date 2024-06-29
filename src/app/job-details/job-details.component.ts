@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
 import { Job, JobService } from '../job.service';
 
 @Component({
@@ -13,14 +14,18 @@ import { Job, JobService } from '../job.service';
 export class JobDetailsComponent implements OnInit {
   job: Job | undefined;
 
-  constructor(private route: ActivatedRoute, private jobService: JobService) {}
+  constructor(
+    private route: ActivatedRoute,
+    private jobService: JobService,
+    private location: Location
+  ) {}
 
   ngOnInit(): void {
-    const jobId = this.route.snapshot.paramMap.get('id');
-    if (jobId) {
-      this.jobService.getJobById(+jobId).subscribe((data) => {
-        this.job = data;
-      });
-    }
+    const jobId = Number(this.route.snapshot.paramMap.get('id'));
+    this.jobService.getJobById(jobId).subscribe((job: Job) => (this.job = job));
+  }
+
+  goBack(): void {
+    this.location.back();
   }
 }

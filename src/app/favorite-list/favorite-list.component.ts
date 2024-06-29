@@ -1,22 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router'; // Import RouterModule
 import { Job } from '../job.service';
-
-// 1
-// 2
-// 3
-// 4
-// 5
-// 6
-// 7
-// 8
-// 9
-// 10
 
 @Component({
   selector: 'app-favorite-list',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule], // Add RouterModule to imports
   templateUrl: './favorite-list.component.html',
   styleUrls: ['./favorite-list.component.css'],
 })
