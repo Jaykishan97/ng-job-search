@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router'; // Import RouterModule
+import { RouterModule, ActivatedRoute } from '@angular/router'; // Import RouterModule and ActivatedRoute
 import { Job, JobService } from '../job.service';
 
 @Component({
@@ -14,7 +14,7 @@ export class JobListComponent implements OnInit {
   jobs: Job[] = [];
   favoriteJobs: Job[] = [];
 
-  constructor(private jobService: JobService) {}
+  constructor(private jobService: JobService, private route: ActivatedRoute) {} // Inject ActivatedRoute
 
   ngOnInit(): void {
     this.jobService.getJobs().subscribe((data) => {
@@ -22,6 +22,13 @@ export class JobListComponent implements OnInit {
       this.jobs = data;
       const favorites = localStorage.getItem('favoriteJobs');
       this.favoriteJobs = favorites ? JSON.parse(favorites) : [];
+
+      this.route.queryParams.subscribe((params) => {
+        const tag = params['tag'];
+        if (tag) {
+          this.sortJobsByTag(tag);
+        }
+      });
     });
   }
 
@@ -37,5 +44,11 @@ export class JobListComponent implements OnInit {
 
   isFavorite(job: Job): boolean {
     return this.favoriteJobs.some((j) => j.id === job.id);
+  }
+
+  sortJobsByTag(tag: string): void {
+    this.jobs = this.jobs.filter(
+      (job) => job.types.includes(tag) || job.industries.includes(tag)
+    );
   }
 }

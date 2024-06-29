@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router'; // Import Router
 import { Location } from '@angular/common';
 import { Job, JobService } from '../job.service';
 
@@ -17,7 +17,8 @@ export class JobDetailsComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private jobService: JobService,
-    private location: Location
+    private location: Location,
+    private router: Router // Inject Router
   ) {}
 
   ngOnInit(): void {
@@ -27,5 +28,9 @@ export class JobDetailsComponent implements OnInit {
 
   goBack(): void {
     this.location.back();
+  }
+
+  sortJobsByTag(tag: string): void {
+    this.router.navigate(['/'], { queryParams: { tag } });
   }
 }

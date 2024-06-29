@@ -52,3 +52,25 @@ ul {
   width: 24px;
   height: 24px;
 }
+
+.tag {
+  display: inline-block;
+  background-color: #2a5c9a;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-right: 5px;
+  font-size: 0.9em;
+}
+
+.job-header {
+  display: flex;
+  align-items: center;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-left: 10px;
+}

@@ -17,9 +17,15 @@
     <span>Back</span>
   </button>
   <h2>{{ job.companyName }} - {{ job.title }}</h2>
-  <img [src]="job.companyLogo" alt="{{ job.companyName }} logo" width="100" />
-  <p><strong>Types:</strong> {{ job.types.join(", ") }}</p>
-  <p><strong>Industries:</strong> {{ job.industries.join(", ") }}</p>
+  <div class="job-header">
+    <img [src]="job.companyLogo" alt="{{ job.companyName }} logo" width="100" />
+    <div class="tags">
+      <span class="tag" *ngFor="let type of job.types">{{ type }}</span>
+      <span class="tag" *ngFor="let industry of job.industries">{{
+        industry
+      }}</span>
+    </div>
+  </div>
   <p><strong>Publish date:</strong> {{ job.publishDate }}</p>
   <p><strong>Location:</strong> {{ job.location }}</p>
   <p><strong>Reference:</strong> {{ job.reference }}</p>
