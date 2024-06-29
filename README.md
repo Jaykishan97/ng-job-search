@@ -25,3 +25,81 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Project Structure
+
+```
+NgJobSearch/
+├── README.md
+├── angular.json
+├── package.json
+├── tsconfig.json
+├── tsconfig.app.json
+├── tsconfig.spec.json
+├── src/
+│   ├── index.html
+│   ├── main.ts
+│   ├── styles.css
+│   ├── mocks.ts
+│   ├── app/
+│   │   ├── app.component.ts
+│   │   ├── app.component.html
+│   │   ├── app.component.css
+│   │   ├── app.component.spec.ts
+│   │   ├── app.routes.ts
+│   │   ├── job.service.ts
+│   │   ├── job.service.spec.ts
+│   │   ├── job-list/
+│   │   │   ├── job-list.component.ts
+│   │   │   ├── job-list.component.html
+│   │   │   ├── job-list.component.css
+│   │   │   ├── job-list.component.spec.ts
+│   │   ├── job-details/
+│   │   │   ├── job-details.component.ts
+│   │   │   ├── job-details.component.html
+│   │   │   ├── job-details.component.css
+│   │   │   ├── job-details.component.spec.ts
+│   │   ├── favorite-list/
+│   │   │   ├── favorite-list.component.ts
+│   │   │   ├── favorite-list.component.html
+│   │   │   ├── favorite-list.component.css
+│   │   │   ├── favorite-list.component.spec.ts
+├── .vscode/
+│   ├── launch.json
+│   ├── tasks.json
+│   ├── extensions.json
+```
+
+## Features
+
+- **Job List**: Displays a list of jobs fetched from the API.
+- **Job Details**: Displays detailed information about a selected job.
+- **Favorites**: Allows users to mark jobs as favorites and view them in a separate list.
+- **Routing**: Uses Angular Router for navigation between job list, job details, and favorites.
+- **Persistence**: Favorites are persisted in local storage to survive page refreshes.
+
+## How to Use
+
+1. **Start the Development Server**: Run `ng serve` and navigate to `http://localhost:4200/`.
+2. **View Jobs**: The main page displays a list of jobs.
+3. **View Job Details**: Click on a job title to view its details.
+4. **Mark as Favorite**: Click on the star icon to mark a job as a favorite.
+5. **View Favorites**: Navigate to the "Favorites" tab to view all favorited jobs.
+
+## Testing
+
+- **Unit Tests**: Run `ng test` to execute unit tests.
+- **End-to-End Tests**: Run `ng e2e` to execute end-to-end tests.
+
+## Contributing
+
+Feel free to fork this project and submit pull requests. For major changes, please open an issue first to discuss what you would like to change.
+
+## License
+
+This project is licensed under the MIT License.
+
+```
+
+This `README.md` file provides a comprehensive overview of the project, including setup instructions, project structure, features, usage, testing, and contribution guidelines.
+```
