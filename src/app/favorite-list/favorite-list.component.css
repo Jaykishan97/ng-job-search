@@ -49,3 +49,12 @@ li .icon-star.active {
 .favorite-list {
   /* Add your styles here */
 }
+
+.no-favorites {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  height: 100vh; /* Full viewport height */
+  font-size: 1em; /* Increase font size */
+  color: #3c4251; /* Text color */
+}
