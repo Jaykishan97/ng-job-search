@@ -1,0 +1,76 @@
+button {
+  margin-bottom: 20px;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+img {
+  display: block;
+  margin-bottom: 20px;
+}
+
+p {
+  margin: 5px 0;
+  color: black; /* Ensure all <p> elements have black text */
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.job-details {
+  /* Add your styles here */
+}
+
+.job-details div {
+  color: black; /* Ensure the text inside divs is black */
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  background-color: #e7e7e7;
+  border: none;
+  color: #2a5c9a;
+  cursor: pointer;
+  font-size: 1em;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.back-button:hover {
+  background-color: #c3c3c3;
+}
+
+.back-button svg {
+  margin-right: 5px;
+  stroke: #2a5c9a; /* Ensure the icon color matches the text color */
+  width: 24px;
+  height: 24px;
+}
+
+.tag {
+  display: inline-block;
+  background-color: #2a5c9a;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-right: 5px;
+  font-size: 0.9em;
+}
+
+.job-header {
+  display: flex;
+  align-items: center;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-left: 10px;
+}

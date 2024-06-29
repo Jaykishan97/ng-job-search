@@ -1,0 +1,23 @@
+<h2>Favorite Jobs</h2>
+<ul *ngIf="favoriteJobs.length > 0; else noFavorites" class="favorite-list">
+  <li *ngFor="let job of favoriteJobs">
+    <img [src]="job.companyLogo" alt="{{ job.companyName }} logo" width="50" />
+    <div>
+      <h3>
+        <a
+          [routerLink]="['/job', job.id]"
+          routerLinkActive="router-link-active"
+        >
+          {{ job.title }}
+        </a>
+      </h3>
+      <p>
+        Company: {{ job.companyName }} &nbsp;&nbsp; Reference:
+        {{ job.reference }}
+      </p>
+    </div>
+  </li>
+</ul>
+<ng-template #noFavorites>
+  <p class="no-favorites">No favorite jobs selected.</p>
+</ng-template>

@@ -1,0 +1,60 @@
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+li img {
+  margin-right: 15px;
+  border-radius: 50%;
+}
+
+li div {
+  flex-grow: 1;
+}
+
+li h3 {
+  margin: 0;
+  font-size: 1.2em;
+  color: #2a5c9a; /* Set uniform title color */
+}
+
+li p {
+  margin: 5px 0;
+  color: #666;
+}
+
+li .icon-star {
+  font-size: 1.5em;
+  color: transparent; /* No fill color when not active */
+  cursor: pointer;
+  stroke: black; /* Black border */
+  stroke-width: 2; /* Border width */
+}
+
+li .icon-star.active {
+  color: gold; /* Gold fill color when active */
+  stroke: black; /* Black border */
+  stroke-width: 2; /* Border width */
+}
+
+/* Blank CSS properties for favorite-list */
+.favorite-list {
+  /* Add your styles here */
+}
+
+.no-favorites {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  height: 100vh; /* Full viewport height */
+  font-size: 1em; /* Increase font size */
+  color: #3c4251; /* Text color */
+}

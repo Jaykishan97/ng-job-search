@@ -1,0 +1,42 @@
+<div *ngIf="job" class="job-details">
+  <button (click)="goBack()" class="back-button">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="feather feather-home"
+    >
+      <path d="M10 20v-6h4v6m5-6h3L12 3 2 14h3v6h14z"></path>
+    </svg>
+    <span>Back</span>
+  </button>
+  <h2>{{ job.companyName }} - {{ job.title }}</h2>
+  <div class="job-header">
+    <img [src]="job.companyLogo" alt="{{ job.companyName }} logo" width="100" />
+    <div class="tags">
+      <span class="tag" *ngFor="let type of job.types">{{ type }}</span>
+      <span class="tag" *ngFor="let industry of job.industries">{{
+        industry
+      }}</span>
+    </div>
+  </div>
+  <p><strong>Publish date:</strong> {{ job.publishDate }}</p>
+  <p><strong>Location:</strong> {{ job.location }}</p>
+  <p><strong>Reference:</strong> {{ job.reference }}</p>
+  <p><strong>Description:</strong></p>
+  <div
+    [innerHTML]="job.description"
+    style="text-align: justify; color: black"
+  ></div>
+  <ul>
+    <li *ngFor="let responsibility of job.responsibilities">
+      {{ responsibility }}
+    </li>
+  </ul>
+</div>
