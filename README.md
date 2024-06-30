@@ -90,16 +90,3 @@ NgJobSearch/
 
 - **Unit Tests**: Run `ng test` to execute unit tests.
 - **End-to-End Tests**: Run `ng e2e` to execute end-to-end tests.
-
-## Contributing
-
-Feel free to fork this project and submit pull requests. For major changes, please open an issue first to discuss what you would like to change.
-
-## License
-
-This project is licensed under the MIT License.
-
-```
-
-This `README.md` file provides a comprehensive overview of the project, including setup instructions, project structure, features, usage, testing, and contribution guidelines.
-```
