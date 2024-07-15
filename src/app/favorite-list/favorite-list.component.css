@@ -58,3 +58,12 @@ li .icon-star.active {
   font-size: 1em; /* Increase font size */
   color: #3c4251; /* Text color */
 }
+
+/* Corrected CSS selectors */
+.collapse + label {
+  /* some styles */
+}
+
+.collapse + label + div {
+  /* some styles */
+}

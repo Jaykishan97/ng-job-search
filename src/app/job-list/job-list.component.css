@@ -48,3 +48,12 @@ li .icon-star.active {
 .job-list {
   /* Add your styles here */
 }
+
+/* Corrected CSS selectors */
+.collapse + label {
+  /* some styles */
+}
+
+.collapse + label + div {
+  /* some styles */
+}

@@ -74,3 +74,12 @@ ul {
   gap: 5px;
   margin-left: 10px;
 }
+
+/* Corrected CSS selectors */
+.collapse + label {
+  /* some styles */
+}
+
+.collapse + label + div {
+  /* some styles */
+}
